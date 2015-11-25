@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Performance 3.0</title> 
+<title>Performance 3.1</title> 
 <style> 
 
 /*Set Default 0 margin*/ 
@@ -271,7 +271,7 @@ background-image: -webkit-linear-gradient(top, #8fd4ff, #3498db);
 
 <!-- Use Interface UI--> 
 <div id="divTitle" class="DTitle" style="visibility: visible;"> 
-<center><p_title>Performance v 3.0 </p_title></center></div> 
+<center><p_title>Performance v 3.1 </p_title></center></div> 
 <!--<input type="checkbox" id="chkCustomize" onchange="CustomChange()"><br><br>--> 
 
 <!-- ___________________________________________________________ --> 
@@ -319,66 +319,87 @@ Caller's Name: <input id="txtName" type="text" name="txtName"> <hr>
 <!-- ___________________________________________________________ --> 
 
 <div id="divRateChange" class="RateChange" style="visibility: hidden; top: 231px;"> 
-<form><br> 
-Old Rate Plan: 
-<select id="myPlanSelect1"> 
+<form>
+<br>
+<table>
+	<tr>
+		<td> Old Rate Plan: </td>
+		<td> <select id="myPlanSelect1"> 
+<option disabled="">---------------------- Pay As You Go ---------------------</option> 
 <option>Pay As You Go Legacy Grandfathered</option> 
 <option>$3 Pay As You Go 30 min|sms $0.10 Overages</option> 
-<option disabled=""></option> 
+<option disabled="">--------------------- Pay By The Day ---------------------</option> 
 <option>$2 Day UL TTW 2G Grandfathered</option> 
 <option>$3 Day UL TTW Web 200 Mb 4G Grandfathered</option> 
-<option disabled=""></option> 
-<option>$30 UL Web Text 5Gb 4G &amp; 100 min $0.10 Overages</option> 
-<option>$30 1500 TT 30Mb Web Grandfathered </option> 
-<option>$40 UL TT 500Mb Capped Data Grandfathered</option> 
-<option>$45 UL TT 2 Gb Capped Data Grandfathered</option> 
-<option>$70 UL 4G TT 3Gb SPMH Grandfathered</option> 
-<option disabled=""></option> 
+<option disabled="">---------------------- Simply Choice ----------------------</option> 
 <option>$35 UL TT No Data</option> 
-<option>$50 UL TTW 1Gb 4G Grandfathered</option> 
-<option>$60 UL TTW 3Gb 4G Grandfathered</option> 
-<option>$70 UL TTW 5Gb 4G Grandfathered</option> 
-<option>$80 UL 4G TT 7Gb SPMH Grandfathered</option> 
-<option disabled=""></option> 
-<option>$50 NA UL TTW 1Gb 4G </option> 
-<option>$60 NA UL TTW 3Gb 4G</option> 
-<option>$70 NA UL TTW 5Gb 4G</option> 
-<option>$80 NA UL 4G TT 7Gb SPMH then SPMH throttle 2G</option>   
-<option disabled=""></option> 
-<option>$40 Simply Prepaid UL TTW 1Gb 4G, No Int. SMS</option> 
-<option>$50 Simply Prepaid UL TTW 3Gb 4G, No Int. SMS</option> 
-<option>$60 Simply Prepaid UL TTW 5Gb 4G, No Int. SMS</option> 
-</select><br> 
+<option> $50 NA UL TT 2GB 4G LTE </option>
+<option> $65 NA UL TT 6GB 4G LTE </option>
+<option> $80 NA UL TT 10GB 4G LTE </option>
+<option> $95 NA UL TT 4G LTE + 14GB SMHS </option>
 
-New Rate Plan: 
-<select id="myPlanSelect2"> 
-<option>Pay As You Go Legacy Grandfathered</option> 
-<option>$3 Pay As You Go 30 min|sms $0.10 Overages</option> 
-<option disabled=""></option> 
-<option>$2 Day UL TTW 2G Grandfathered</option> 
-<option>$3 Day UL TTW Web 200 Mb 4G Grandfathered</option> 
-<option disabled=""></option> 
-<option>$30 UL Web Text 5Gb 4G &amp; 100 min $0.10 Overages</option> 
+<option disabled="">---------------------- Simply Prepaid ----------------------</option> 
+<option>$40 Simply Prepaid UL TTW 1Gb 4G, No Int. SMS</option> 
+<option>$50 Simply Prepaid UL TTW 3Gb 4G, No Int. SMS</option> 
+<option>$60 Simply Prepaid UL TTW 5Gb 4G, No Int. SMS</option>
+<option disabled="">----------------------- Promotional -----------------------</option> 
+<option>$30 UL Web Text 5Gb 4G &amp; 100 min $0.10 Overages</option><option disabled="">------------------ Monthly Grandfathered-----------------</option> 
 <option>$30 1500 TT 30Mb Web Grandfathered </option> 
 <option>$40 UL TT 500Mb Capped Data Grandfathered</option> 
 <option>$45 UL TT 2 Gb Capped Data Grandfathered</option> 
 <option>$70 UL 4G TT 3Gb SPMH Grandfathered</option> 
-<option disabled=""></option> 
-<option>$35 UL TT No Data</option> 
+<option disabled="">------------- North America Grandfathered -------------</option> 
+<option>$50 NA UL TTW 1Gb 4G Grandfathered</option> 
+<option>$60 NA UL TTW 3Gb 4G Grandfathered</option> 
+<option>$70 NA UL TTW 5Gb 4G Grandfathered</option> 
+<option>$80 NA UL 4G TT 7Gb SPMH/Throttle 2G Grandfathered</option> 
+<option disabled="">-------------- Simple Choice Grandfathered--------------</option> 
 <option>$50 UL TTW 1Gb 4G Grandfathered</option> 
 <option>$60 UL TTW 3Gb 4G Grandfathered</option> 
 <option>$70 UL TTW 5Gb 4G Grandfathered</option> 
 <option>$80 UL 4G TT 7Gb SPMH Grandfathered</option> 
-<option disabled=""></option> 
-<option>$50 NA UL TTW 1Gb 4G </option> 
-<option>$60 NA UL TTW 3Gb 4G</option> 
-<option>$70 NA UL TTW 5Gb 4G</option> 
-<option>$80 NA UL 4G TT 7Gb SPMH then SPMH throttle 2G</option>   
-<option disabled=""></option> 
+</select> </td>
+	</tr>
+
+	<tr>
+		<td> New Rate Plan: </td>
+		<td> <select id="myPlanSelect2"> 
+<option disabled="">---------------------- Pay As You Go ---------------------</option> 
+<option>Pay As You Go Legacy Grandfathered</option> 
+<option>$3 Pay As You Go 30 min|sms $0.10 Overages</option> 
+<option disabled="">--------------------- Pay By The Day ---------------------</option> 
+<option>$2 Day UL TTW 2G Grandfathered</option> 
+<option>$3 Day UL TTW Web 200 Mb 4G Grandfathered</option> 
+<option disabled="">---------------------- Simply Choice ----------------------</option> 
+<option>$35 UL TT No Data</option> 
+<option> $50 NA UL TT 2GB 4G LTE </option>
+<option> $65 NA UL TT 6GB 4G LTE </option>
+<option> $80 NA UL TT 10GB 4G LTE </option>
+<option> $95 NA UL TT 4G LTE + 14GB SMHS </option>
+
+<option disabled="">---------------------- Simply Prepaid ----------------------</option> 
 <option>$40 Simply Prepaid UL TTW 1Gb 4G, No Int. SMS</option> 
 <option>$50 Simply Prepaid UL TTW 3Gb 4G, No Int. SMS</option> 
-<option>$60 Simply Prepaid UL TTW 5Gb 4G, No Int. SMS</option>  
-</select> <br> 
+<option>$60 Simply Prepaid UL TTW 5Gb 4G, No Int. SMS</option>
+<option disabled="">----------------------- Promotional -----------------------</option> 
+<option>$30 UL Web Text 5Gb 4G &amp; 100 min $0.10 Overages</option><option disabled="">------------------ Monthly Grandfathered-----------------</option> 
+<option>$30 1500 TT 30Mb Web Grandfathered </option> 
+<option>$40 UL TT 500Mb Capped Data Grandfathered</option> 
+<option>$45 UL TT 2 Gb Capped Data Grandfathered</option> 
+<option>$70 UL 4G TT 3Gb SPMH Grandfathered</option> 
+<option disabled="">------------- North America Grandfathered -------------</option> 
+<option>$50 NA UL TTW 1Gb 4G Grandfathered</option> 
+<option>$60 NA UL TTW 3Gb 4G Grandfathered</option> 
+<option>$70 NA UL TTW 5Gb 4G Grandfathered</option> 
+<option>$80 NA UL 4G TT 7Gb SPMH/Throttle 2G Grandfathered</option> 
+<option disabled="">-------------- Simple Choice Grandfathered--------------</option> 
+<option>$50 UL TTW 1Gb 4G Grandfathered</option> 
+<option>$60 UL TTW 3Gb 4G Grandfathered</option> 
+<option>$70 UL TTW 5Gb 4G Grandfathered</option> 
+<option>$80 UL 4G TT 7Gb SPMH Grandfathered</option>   
+</select>  </td>
+	</tr>
+</table>
 <hr> 
 
 <!-- OPTION BUTTON--> 
@@ -1364,6 +1385,7 @@ function generate_trouble() {
 
 var Trouble = document.getElementById("myTroubleSelect").value; 
 var message1="| Reason: Customer wanted to troubleshoot " + Trouble; 
+
 var message2="\n| Resolution Steps: Basic Troubleshooting \n"; 
 
 var callerName=""; 
@@ -1377,11 +1399,11 @@ for(var i = 1; i<= 4; i++)
 { 
 if(document.getElementById("advTS" + i).checked == true) 
 { 
-advisements += document.getElementById("advTS" + i).value + "\n" ; 
+advisements += " " + document.getElementById("advTS" + i).value + " \n" ; 
 } 
 } 
 
-document.getElementById("areaGenerate").value =callerName + message1 + message2 + advisements + NewSelfHelp() + REP_ID(); 
+document.getElementById("areaGenerate").value =callerName + message1 + advisements + message2 + NewSelfHelp() + REP_ID(); 
 
 } 
 
@@ -1403,7 +1425,7 @@ if(document.getElementById("optPortConv1").checked == true) {
 var sms = "\nTemporary Number: " + document.getElementById("txtTemporal").value; 
 sms += "\nRequested Number:" + document.getElementById("txtRequested").value; 
 sms += "\nAccount Number:" + document.getElementById("txtAccount").value ; 
-sms += "\nAccount Number:" + document.getElementById("txtPinNumber").value + "\n"; 
+sms += "\nPin Number:" + document.getElementById("txtPinNumber").value + "\n"; 
 
 var advisements="\n Advisements \n"; 
 for(var i = 1; i<= 4; i++) 
@@ -1514,6 +1536,7 @@ PortConvClick()
 
 // make btnclean blue 
 btnclear.style.background = "-webkit-gradient(linear, 0% 0%, 0% 100%, from(#8fd4ff), to(#3498db))"; 
+fncEmptyTemplate();
 } 
 
 } 
